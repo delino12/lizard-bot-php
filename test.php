@@ -4,7 +4,7 @@ require('__engine.php');
 
 # verify the page set tokem and page access token
 $VERIFY_TOKEN = 'delino12';
-$PAGE_ACCESS_TOKEN = 'EAAPqY1IUo8cBAHsuRkhfezfkPg6k2knx6CGRuFs6sCs6hPJCZAIw9zLoIEQp794ZB9nhtzZCqPzZBCBxLpPqHOfrvv4qCejexZBgsgVJwMLV7NFQdlGRdtpR6UoKPhs4Uy0vHkUZBSnZC3NOeYyCiffY5vKkXWT35fRQ2ZApZA0G9lAZDZD';
+$PAGE_ACCESS_TOKEN = 'EAAPqY1IUo8cBAE6Sev039mH6uIZAdTnAar6dwr7WphlepgPFpaxtVWQdRA6X7n9sg8izl1J4wZBELax6U3XrFcUWDmfjMP3RMs8DY1EE7lziyErZCtawOkzijA3mVoUcsEUH9VhG8DQlzBAUrqac1JVpsBdjgSaZBO9Fm4nD8AZDZD';
 
 # facebook init challange matchs
 $challenge = $_REQUEST['hub_challenge'];
