@@ -95,8 +95,11 @@ function build_send_button_message($sender, $web_url, $text) {
 	            payload: "+16505551234"
 	          }]
 	        }
+	       }
 	    }
 	}';
+
+	return $jsonData;
 }
 
 function send_button_message($sender, $web_url, $text, $access_token){
