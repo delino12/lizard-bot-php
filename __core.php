@@ -3,6 +3,7 @@
 // This is the default value set in php.ini
 error_reporting(E_ALL & ~E_NOTICE);
 
+# send all already build messages
 function send_message($access_token, $payload) {
 	// Send/Recieve API
 	$url = 'https://graph.facebook.com/v2.6/me/messages?access_token=' . $access_token;
@@ -24,6 +25,7 @@ function send_message($access_token, $payload) {
 	return $result;
 }
 
+# build a simple text message
 function build_text_message_payload($sender, $message){
 	// Build the json payload data
 	$jsonData = '{
@@ -37,13 +39,15 @@ function build_text_message_payload($sender, $message){
 	}';
 	return $jsonData;
 }
-
+# compile json build
 function send_text_message($sender, $message, $access_token){
 	$jsonData = build_text_message_payload($sender, $message);
 	$result = send_message($access_token, $jsonData);
 	return $result;
 }
 
+
+# build an image message
 function build_image_message_payload($sender, $image_url){
 	// Build the json payload data
 	$jsonData = '{
@@ -62,7 +66,7 @@ function build_image_message_payload($sender, $image_url){
 	}';
 	return $jsonData;
 }
-
+# compile json build
 function send_image_message($sender, $image_url, $access_token){
 	$jsonData = build_image_message_payload($sender, $image_url);
 	$result = send_message($access_token, $jsonData);
@@ -70,7 +74,9 @@ function send_image_message($sender, $image_url, $access_token){
 }
 
 
+# build a button message with url and text response
 function build_send_button_message($sender, $web_url, $text) {
+	// build a send button payload.
   	$jsonData = '{
 	    recipient: {
 	      id: "'.$sender.'"
@@ -84,28 +90,29 @@ function build_send_button_message($sender, $web_url, $text) {
 	          buttons:[{
 	            type: "web_url",
 	            url: "'.$web_url.'",
-	            title: "Open Web URL"
+	            title: "visit Ama Technology"
 	          }, {
 	            type: "postback",
-	            title: "Lizards Bot Design by Ama Technology Team",
+	            title: "Lizards Bot Design by Ama Technology",
 	            payload: "image"
 	          }, {
 	            type: "phone_number",
-	            title: "Call Phone Number",
+	            title: "Contact Ama Technology",
 	            payload: "+2348127160258"
 	          }]
 	        }
 	       }
 	    }
 	}';
-
 	return $jsonData;
 }
-
+# compile json build
 function send_button_message($sender, $web_url, $text, $access_token){
 	$jsonData = build_send_button_message($sender, $web_url, $text);
 	$result = send_message($access_token, $jsonData);
 	return $result;
 }
+
+
 
 ?>
