@@ -29,7 +29,7 @@ class LizardTalk
 
 			if($this->message == 'hi'){
 				$web_url = 'http://www.amatechteam.com';
-				$text = 'Welcome to Ama Technology Team';
+				$text = 'Welcome to Ama Technology, we provide Bot Assistance for your business';
 				send_button_message($this->sender, $web_url, $text, $this->page_access_token);
 			}
 		}

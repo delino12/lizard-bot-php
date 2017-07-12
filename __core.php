@@ -87,12 +87,12 @@ function build_send_button_message($sender, $web_url, $text) {
 	            title: "Open Web URL"
 	          }, {
 	            type: "postback",
-	            title: "Trigger Postback",
-	            payload: "DEVELOPER_DEFINED_PAYLOAD"
+	            title: "Lizards Bot Design by Ama Technology Team",
+	            payload: "image"
 	          }, {
 	            type: "phone_number",
 	            title: "Call Phone Number",
-	            payload: "+16505551234"
+	            payload: "+2348127160258"
 	          }]
 	        }
 	       }
