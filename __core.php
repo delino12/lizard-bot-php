@@ -118,7 +118,7 @@ function send_button_message($sender, $web_url, $text, $access_token){
  * Send a Structured Message (Generic Message type) using the Send API.
  *
  */
-function build_send_generic_message($sender, $subtitle_text, $body_text, $image_url, $web_url) {
+function build_send_generic_message($sender, $subtitle_text, $image_url, $web_url) {
 
   	$jsonData = '{
 	    recipient: {
@@ -132,7 +132,7 @@ function build_send_generic_message($sender, $subtitle_text, $body_text, $image_
 	          elements: [{
 	            title: "rift",
 	            subtitle: "'.$subtitle_text.'",
-	            item_url: "https://www.oculus.com/en-us/rift/",               
+	            item_url: "'.$web_url.'",               
 	            image_url: "'.$image_url.'",
 	            buttons: [{
 	              type: "web_url",
@@ -140,21 +140,21 @@ function build_send_generic_message($sender, $subtitle_text, $body_text, $image_
 	              title: "Open Web URL"
 	            }, {
 	              type: "postback",
-	              title: "Call Postback",
+	              title: "Buy Lizard Bot",
 	              payload: "Payload for first bubble",
 	            }],
 	          }, {
 	            title: "touch",
 	            subtitle: "Your Hands, Now in VR",
-	            item_url: "https://www.oculus.com/en-us/touch/",               
-	            image_url: SERVER_URL + "/assets/touch.png",
+	            item_url: "'.$web_url.'",               
+	            image_url: "'.$image_url.'",
 	            buttons: [{
 	              type: "web_url",
-	              url: "https://www.oculus.com/en-us/touch/",
-	              title: "Open Web URL"
+	              url: "'.$web_url.'",
+	              title: "Visit Lizard Home"
 	            }, {
 	              type: "postback",
-	              title: "Call Postback",
+	              title: "Buy Lizard Bot",
 	              payload: "Payload for second bubble",
 	            }]
 	          }]
@@ -167,8 +167,8 @@ function build_send_generic_message($sender, $subtitle_text, $body_text, $image_
 }
 
 # compile json build
-function send_generic_message($sender, $subtitle_text, $body_text, $image_url, $web_url, $access_token){
-	$jsonData = build_send_generic_message($sender, $subtitle_text, $body_text, $image_url, $web_url);
+function send_generic_message($sender, $subtitle_text, $image_url, $web_url, $access_token){
+	$jsonData = build_send_generic_message($sender, $subtitle_text, $image_url, $web_url);
 	$result = send_message($access_token, $jsonData);
 	return $result;
 }
