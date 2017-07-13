@@ -57,7 +57,7 @@ class LizardTalk
 					send_text_message($this->sender, $response, $this->page_access_token);
 				}
 				# end of response
-			}else{
+			}elseif(!in_array($this->message, $word_lists)){
 				$response = ' i\'m having a hard time understanding what you type: ("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
 				send_text_message($this->sender, $response, $this->page_access_token);
 			}	
