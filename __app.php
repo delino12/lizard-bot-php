@@ -17,7 +17,7 @@ $words = array(
 					  \nLearn how you learn.',
 	'one'		=>	' Here is step 1',
 	'date'		=>	' Today Date is "'.date(' M D Y').'" ',
-	'hi',		=> 	' Welcome to Ama Technology, we provide Bot Assistance for your business',
+	'hi'		=> 	' Welcome to Ama Technology, we provide Bot Assistance for your business',
 	'image'		=> 	' https://i.warosu.org/data/tg/img/0261/33/1374363369802.jpg '
 
 );
