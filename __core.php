@@ -115,11 +115,10 @@ function send_button_message($sender, $web_url, $text, $access_token){
 
 
 /*
- * Send a Structured Message (Generic Message type) using the Send API.
- *
+ * Send a Structured Message (Generic Message template) using Json Converted.
+ * Sample of a Generic Structure PHP build template with Bubble.
  */
 function build_send_generic_message($sender, $subtitle_text, $image_url, $web_url) {
-
   	$jsonData = '{
 	    recipient: {
 	      id: "'.$sender.'"
