@@ -25,7 +25,7 @@ class LizardTalk
 			
 			$word_lists = array('hi','hey','hello','image','info','date','location','details','help');
 
-			if(in_array($this->message, $word_lists))
+			if(in_array($this->message, $word_lists)){
 				# start response
 				if($this->message == 'hi' || $this->message == 'hello' || $this->message == 'hey'){
 					$response = 'Welcome to Ama Technology, we offer Assistance to PHP developer, Developing Bot using facebook messenger bot kit ';
@@ -57,10 +57,11 @@ class LizardTalk
 					send_text_message($this->sender, $response, $this->page_access_token);
 				}
 				# end of response
-		}else{
-			$response = ' i\'m having a hard time understanding what you type: ("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
-			send_text_message($this->sender, $response, $this->page_access_token);
-		}	
+			}else{
+				$response = ' i\'m having a hard time understanding what you type: ("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
+				send_text_message($this->sender, $response, $this->page_access_token);
+			}	
+		}
 	}
 }
 
