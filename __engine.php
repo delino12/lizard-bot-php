@@ -23,6 +23,13 @@ class LizardTalk
 	public function talkback()
 	{
 		if(!empty($this->message)){
+			if(in_array($this->message, $words))
+			{
+				$response = $words[$this->message];
+				send_image_message($this->sender, $response, $this->page_access_token);
+			}
+
+			/*
 			if($this->message == 'image'){
 				$image_url = 'https://i.warosu.org/data/tg/img/0261/33/1374363369802.jpg';
 				send_image_message($this->sender, $image_url, $this->page_access_token);
@@ -41,6 +48,7 @@ class LizardTalk
 				$body_text = 'You can always ask for more lizard spy bot are everywhere. there is no wall above me. ';
 				send_generic_message($sender, $subtitle_text, $image_url, $web_url, $this->page_access_token);
 			}
+			*/
 		}
 	}
 }
