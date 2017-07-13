@@ -1,7 +1,6 @@
 <?php
 # octa structure of A.I
-
-// welcoming words
+# welcoming words
 $words = array(
 	'hello' 	=> 	' Hi, My name is lizardsbot, i\'ll be your guide to learn Facebook PHP messenger bot, welcome to the to my word!\n lizards are everywhere',
 	'time' 		=> 	' The time is "'.date(' h:i:s').'" ',
@@ -21,5 +20,4 @@ $words = array(
 	'image'		=> 	' https://i.warosu.org/data/tg/img/0261/33/1374363369802.jpg '
 
 );
-
 ?>

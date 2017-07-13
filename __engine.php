@@ -23,11 +23,20 @@ class LizardTalk
 	public function talkback()
 	{
 		if(!empty($this->message)){
+			
+			if($this->message == 'hi' || $this->message == 'hello' || $this->message == 'hey'){
+				$response = 'Welcome to Ama Technology, we offer Assistance to PHP developer Bot using facebook messenger bot kit ';
+				send_text_message($this->sender, $response, $this->page_access_token);
+
+			}
+
+			/*
 			if(in_array($this->message, $words))
 			{
 				$response = $words[$this->message];
 				send_image_message($this->sender, $response, $this->page_access_token);
 			}
+			*/
 
 			/*
 			if($this->message == 'image'){
