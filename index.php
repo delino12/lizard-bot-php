@@ -26,3 +26,26 @@ if ($verify_token === $VERIFY_TOKEN) {
 	$lizads_talks->talkback();
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lizards Bot</title>
+	<link rel="stylesheet" type="text/css" href="bassets/ootstrap.css">
+	<script type="text/javascript" src="assets/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/jquery.js"></script>
+</head>
+<body>
+	<div class="container">	
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1 class="lead">Welcome to lizard Bot</h1>
+				<hr />
+				<div class="img">
+					<img src="assets/img/lizards-bot.jpg" class="img-square" width="100%" height="100%">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -39,7 +39,7 @@ class LizardTalk
 				$image_url = 'https://i.warosu.org/data/tg/img/0261/33/1374363369802.jpg';
 				$subtitle_text = 'Lizard Bot offers PHP Flexibility';
 				$body_text = 'You can always ask for more lizard spy bot are everywhere. there is no wall above me. ';
-				send_generic_message($sender, $subtitle_text, $body_text, $image_url, $web_url, $this->page_access_token)
+				send_generic_message($sender, $subtitle_text, $body_text, $image_url, $web_url, $this->page_access_token);
 			}
 		}
 	}
