@@ -58,8 +58,7 @@ class LizardTalk
 				}
 				# end of response
 			}else{
-				$response = ' lizard bot is having hard time understanding ';
-				$response .= ' what you type: ("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
+				$response = 'Lizardsbot is having hard time understanding what you type:("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
 				send_text_message($this->sender, $response, $this->page_access_token);
 			}	
 		}
