@@ -1,7 +1,29 @@
 <?php
 # include functions 
 require('__core.php');
-require('__app.php');
+//require('__app.php');
+
+# octa structure of A.I
+# welcoming words
+$words = array(
+	'hi'		=> 	' Welcome to Ama Technology, we offer Assistance to PHP developer Bot using facebook messenger bot kit',
+	'hey'		=> 	' Welcome to Ama Technology, we offer Assistance to PHP developer Bot using facebook messenger bot kit',
+	'hello'		=> 	' Welcome to Ama Technology, we offer Assistance to PHP developer Bot using facebook messenger bot kit',
+	'time' 		=> 	' The time is "'.date(' h:i:s').'" ',
+	'joke' 		=> 	' Do you know that all redneck lizards in Nigeria always nod their head even when Nigeria economy is very bad!',
+	'day' 		=> 	' Today: "'.date('D').'" ',
+	'tips'		=> 	'  going to teach you some study tricks, how to dessolve complex learning materials',
+	'ok'		=> 	' Thanks for using lizards service you can always come back for more.....',
+	'proceed'	=>	' step 1 goes here........',
+	'start'		=>	' learning tips to learn more quicly and more deeply 
+					  \n, pay attention to how you pay attention, 
+					  \n Think about how you think. 
+					  \nLearn how you learn.',
+	'one'		=>	' Here is step 1',
+	'date'		=>	' Today Date is "'.date(' M D Y').'" ',
+	'image'		=> 	' https://i.warosu.org/data/tg/img/0261/33/1374363369802.jpg '
+);
+
 
 /**
 * Lizards Bot
@@ -23,9 +45,9 @@ class LizardTalk
 	public function talkback()
 	{
 		if(!empty($this->message)){
-			
-			if($this->message == 'hi' || $this->message == 'hello' || $this->message == 'hey'){
-				$response = 'Welcome to Ama Technology, we offer Assistance to PHP developer Bot using facebook messenger bot kit ';
+			// check if image response need image files 
+			if(in_array($this->message, $words)){
+				$response = $words[$this->message];
 				send_text_message($this->sender, $response, $this->page_access_token);
 
 			}
