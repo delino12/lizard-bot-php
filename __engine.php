@@ -23,7 +23,7 @@ class LizardTalk
 	{
 		if(!empty($this->message)){
 			
-			$word_lists = array('hi','hey','hello','image','info','date','location','details','help');
+			$word_lists = array('hi','hey','hello','generic','image','info','date','location','details','help');
 
 			if(in_array($this->message, $word_lists)){
 				# start response
@@ -57,8 +57,9 @@ class LizardTalk
 					send_text_message($this->sender, $response, $this->page_access_token);
 				}
 				# end of response
-			}elseif(!in_array($this->message, $word_lists)){
-				$response = ' i\'m having a hard time understanding what you type: ("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
+			}else{
+				$response = ' lizard bot is having hard time understanding ';
+				$response .= ' what you type: ("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
 				send_text_message($this->sender, $response, $this->page_access_token);
 			}	
 		}
