@@ -35,6 +35,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 	<script type="text/javascript" src="assets/bootstrap.js"></script>
 	<script type="text/javascript" src="assets/jquery.js"></script>
 </head>
+
 <body>
 	<div class="container">	
 		<div class="row">
@@ -45,6 +46,17 @@ if ($verify_token === $VERIFY_TOKEN) {
 					<img src="assets/img/lizards-bot.jpg" class="img-square" width="100%" height="100%">
 				</div>
 			</div>
+		</div>
+	</div>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="footer">
+				<div> 
+					Copyright protected &copy; <?= date("Y"); ?> Design and Developed by Ama Technology Team 
+					<a href="https://www.amatechteam.com">www.amatechteam.com</a>
+				</div>
+			</div>	
 		</div>
 	</div>
 </body>
