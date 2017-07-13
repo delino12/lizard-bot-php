@@ -31,7 +31,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 <html>
 <head>
 	<title>Lizards Bot</title>
-	<link rel="stylesheet" type="text/css" href="bassets/ootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
 	<script type="text/javascript" src="assets/bootstrap.js"></script>
 	<script type="text/javascript" src="assets/jquery.js"></script>
 </head>
