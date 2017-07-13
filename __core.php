@@ -133,7 +133,7 @@ function build_send_generic_message($sender, $subtitle_text, $body_text, $image_
 	            title: "rift",
 	            subtitle: "'.$subtitle_text.'",
 	            item_url: "https://www.oculus.com/en-us/rift/",               
-	            image_url: "'$image_url'",
+	            image_url: "'.$image_url.'",
 	            buttons: [{
 	              type: "web_url",
 	              url: "'.$web_url.'",
