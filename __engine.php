@@ -2,21 +2,6 @@
 # include functions 
 require('__core.php');
 
-/*
-* Acceptable words for Lizards Bot are.
-*/
-$word_lists = array(
-	'hi',
-	'hey',
-	'hello',
-	'image',
-	'info',
-	'date',
-	'location',
-	'details',
-	'proceed'
-);
-
 /**
 * Lizards Bot
 */
@@ -37,9 +22,8 @@ class LizardTalk
 	public function talkback()
 	{
 		if(!empty($this->message)){
-
+			$word_lists = array('hi','hey','hello','image','info','date','location','details','help');
 			if(in_array($this->message, $word_lists))
-			{
 				# start response
 				if($this->message == 'hi' || $this->message == 'hello' || $this->message == 'hey'){
 					$response = 'Welcome to Ama Technology, we offer Assistance to PHP developer, Developing Bot using facebook messenger bot kit ';
@@ -70,10 +54,9 @@ class LizardTalk
 					$response .= 'here are the list of what i can do for you (hi), (details), (image), (info), (generic) for generic template. Thanks ';
 					send_text_message($this->sender, $response, $this->page_access_token);
 				}
-
 				# end of response
 			}else{
-				$response = ' i\'m having a hard time understanding what you type: " ("'.$this->message.'") " \n you can type (details) or (help) for Assistance ';
+				$response = ' i\'m having a hard time understanding what you type: ("'.$this->message.'") \n you can type (details) or (help) for Assistance ';
 				send_text_message($this->sender, $response, $this->page_access_token);
 			}	
 		}
