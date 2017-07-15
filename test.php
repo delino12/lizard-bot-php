@@ -11,4 +11,6 @@ if(in_array($words, $word_lists)){
 }else{
 	echo $words.' not found';
 }
+echo '<br />';
+echo date(" F D h:i:s a");
 ?>

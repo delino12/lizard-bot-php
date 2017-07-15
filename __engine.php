@@ -37,6 +37,12 @@ class LizardTalk
 					send_image_message($this->sender, $image_url, $this->page_access_token);
 				}
 
+				if($this->message == 'date')
+				{
+					$response = 'Today\'s date is: "'.date(" F D h:i:s a").'" ';
+					send_text_message($this->sender, $response, $this->page_access_token);
+				}
+
 				if($this->message == 'info'){
 					$web_url = 'http://www.amatechteam.com';
 					$text = 'Welcome to Ama Technology, we provide Bot Assistance for your business';
