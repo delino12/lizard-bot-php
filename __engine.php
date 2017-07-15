@@ -39,7 +39,7 @@ class LizardTalk
 
 				if($this->message == 'date')
 				{
-					$response = 'Today date is: "'.date(" F D h:i:s a").'" ';
+					$response = 'Today date is: '.date(" F D h:i:s a");
 					send_text_message($this->sender, $response, $this->page_access_token);
 				}
 
