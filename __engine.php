@@ -40,7 +40,7 @@ class LizardTalk
 				# start response
 				if($this->message == 'hi' || $this->message == 'hello' || $this->message == 'hey'){
 					$response = 'Welcome to Ama Technology, we offer Assistance to PHP developer, Developing Bot using facebook messenger bot kit ';
-					send_text_message($this->sender, $response, $this->page_access_token);
+					send_text_message($sender, $response, $this->page_access_token);
 				}
 
 				# start response
@@ -87,5 +87,4 @@ class LizardTalk
 		}
 	}
 }
-
 ?>

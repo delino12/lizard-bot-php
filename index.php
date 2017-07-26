@@ -13,7 +13,6 @@ if ($verify_token === $VERIFY_TOKEN) {
   	//If the Verify token matches, return the challenge.
   	echo $challenge;
 }else {
-	
 	# scan bot input for incomming request
 	$input = json_decode(file_get_contents('php://input'), true);
 	// Get the Senders Page Scoped ID
@@ -31,9 +30,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 <html>
 <head>
 	<title>Lizards Bot</title>
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap.css">
-	<script type="text/javascript" src="assets/bootstrap.js"></script>
-	<script type="text/javascript" src="assets/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 </head>
 
 <body>
@@ -59,5 +56,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 			</div>	
 		</div>
 	</div>
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
 </body>
 </html>
