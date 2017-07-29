@@ -172,8 +172,4 @@ function send_generic_message($sender, $subtitle_text, $image_url, $web_url, $ac
 	return $result;
 }
 
-
-
-
-
 ?>
