@@ -34,6 +34,27 @@ if ($verify_token === $VERIFY_TOKEN) {
 </head>
 
 <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand active" href="index.php">Lizard Bot</a>
+	    </div>
+
+	    <div id="navbar" class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="privacy/"><i class="fa fa-lock"></i> Privacy</a></li>
+	        <li><a href="contact/"><i class="fa fa-volume-control-phone"></i> Contact Us</a></li>
+	        <li><a href="terms/termsfeed-terms-conditions-pdf-english.pdf"><i class="fa fa-file-pdf-o"></i>Terms and Conditions</a></li>
+	      </ul>
+	    </div><!--/.nav-collapse -->
+	  </div>
+	</nav>
 	<div class="container">	
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
