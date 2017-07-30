@@ -3,6 +3,7 @@
 <head>
     <title>Lizards Bot</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../assets/font/css/font-awesome.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="../privacy/"><i class="fa fa-lock"></i> Privacy</a></li>
         <li><a href="../contact/" class="active"><i class="fa fa-volume-control-phone"></i> Contact Us</a></li>
-        <li><a href="../terms/termsfeed-terms-conditions-pdf-english.pdf"><i class="fa fa-file-pdf-o"></i>Terms and Conditions</a></li>
+        <li><a href="../terms/termsfeed-terms-conditions-pdf-english.pdf"><i class="fa fa-file-pdf-o"></i> Terms and Conditions</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
