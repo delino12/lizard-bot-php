@@ -93,7 +93,7 @@ class LizardTalk
 				# end of response
 			}else{
 				$response = 'Lizardsbot is having hard time understanding ';
-				$response .= 'what you type: {{$this->message}} \n you can type (details) or (help) for Assistance ';
+				//$response .= 'what you type: {{$this->message}} \n you can type (details) or (help) for Assistance ';
 				return send_text_message($this->sender, $response, $this->page_access_token);
 			}	
 		}
