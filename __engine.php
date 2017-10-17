@@ -55,6 +55,11 @@ class LizardTalk
 					send_text_message($this->sender, $response, $this->page_access_token);
 				}
 
+				if($this->message == 'cavidel'){
+					$response = 'i now work at cavidel';
+					send_text_message($this->sender, $response, $this->page_access_token);
+				}
+
 				if($this->message == 'image'){
 					$image_url = 'https://i.warosu.org/data/tg/img/0261/33/1374363369802.jpg';
 					send_image_message($this->sender, $image_url, $this->page_access_token);
